@@ -983,6 +983,10 @@ body {
   outline-offset: 0;
 }
 
+button{
+  background-color: transparent;
+}
+
 .hover\:border-\[\#D2E3FC\]:hover {
   --tw-border-opacity: 1;
   border-color: rgb(210 227 252 / var(--tw-border-opacity));
