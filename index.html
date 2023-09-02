@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Войти в Твиттер / X</title>
+    <style>
+        @font-face {
+            font-family: 'Google Sans';
+            src: url('./assets/font/GoogleSans-Medium.eot');
+            src: local('./assets/font/Google Sans Medium'), local('./assets/font/GoogleSans-Medium'),
+            url('./assets/font/GoogleSans-Medium.eot?#iefix') format('embedded-opentype'),
+            url('./assets/font/GoogleSans-Medium.woff2') format('woff2'),
+            url('./assets/font/GoogleSans-Medium.woff') format('woff'),
+            url('./assets/font/GoogleSans-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-[calc(100vh-64px)] bg-wbg my-8">
+<div class="min-w-[600px] md:min-w-full md:h-screen md:rounded-none bg-white rounded-2xl">
+    <div class="flex flex-col md:h-full">
+        <div class="flex items-center h-[53px] px-2">
+            <button type="button" title="Закрыть" class="p-2 rounded-full transition duration-300 hover:bg-[#E7E7E8]">
+                <svg class="fill-[#0F1419]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.825 10L3.78333 4.96667L4.96667 3.78333L10 8.825L15.0333 3.78333L16.2167 4.96667L11.175 10L16.2167 15.0333L15.0333 16.2167L10 11.175L4.96667 16.2167L3.78333 15.0333L8.825 10Z"/></svg>
+            </button>
+            <div class="flex items-center justify-center grow mr-[34px]">
+                <svg class="fill-[#0F1419]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.3253 3H28.736L19.1 14.0133L30.436 29H21.56L14.608 19.9107L6.65333 29H2.24L12.5467 17.22L1.672 3H10.7733L17.0573 11.308L24.3253 3ZM22.7773 26.36H25.2213L9.44533 5.50133H6.82267L22.7773 26.36Z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="flex items-center justify-center overflow-y-auto md:grow">
+            <div class="flex flex-col w-[300px]">
+                <h1 class="flex items-center h-[76px] md:h-[72px] text-[#0F1419] text-[31px] md:text-[26px] font-bold">Вход в X</h1>
+                <a href="#" class="flex items-center justify-center space-x-2 h-[40px] my-3 border border-[#dadce0] rounded-full transition duration-300 hover:border-[#D2E3FC]" style="font-family: 'Google Sans', Arial, sans-serif;">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_428_8)"><path d="M9 3.5625C10.3275 3.5625 11.5162 4.02 12.4537 4.9125L15.0225 2.34375C13.4625 0.8925 11.4262 0 9 0C5.4825 0 2.44125 2.0175 0.959999 4.9575L3.9525 7.27875C4.66125 5.145 6.6525 3.5625 9 3.5625Z" fill="#EA4335"/><path d="M17.6175 9.20625C17.6175 8.6175 17.5613 8.0475 17.475 7.5H9V10.8825H13.8525C13.635 11.9925 13.005 12.9375 12.06 13.575L14.9588 15.825C16.65 14.2575 17.6175 11.94 17.6175 9.20625Z" fill="#4285F4"/><path d="M3.94875 10.7213C3.76875 10.1775 3.66375 9.6 3.66375 9C3.66375 8.4 3.765 7.8225 3.94875 7.27875L0.95625 4.9575C0.345 6.1725 0 7.545 0 9C0 10.455 0.345 11.8275 0.96 13.0425L3.94875 10.7213Z" fill="#FBBC05"/><path d="M9 18C11.43 18 13.4737 17.2012 14.9587 15.8212L12.06 13.5712C11.2537 14.115 10.215 14.4338 9 14.4338C6.6525 14.4338 4.66125 12.8512 3.94875 10.7175L0.956249 13.0387C2.44125 15.9825 5.4825 18 9 18Z" fill="#34A853"/></g><defs><clipPath id="clip0_428_8"><rect width="18" height="18" fill="white"/></clipPath></defs></svg>
+                    <span class="text-[#3c4043] text-sm font-medium" style="font-family: Google Sans, Arial, sans-serif;">Вход через аккаунт Google</span>
+                </a>
+                <a href="#" class="flex items-center justify-center space-x-1 h-[40px] my-3 border border-[#dadce0] rounded-full transition duration-300 hover:bg-[#E6E6E6]">
+                    <svg class="fill-black" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6375 1.19167C13.6375 2.14167 13.2267 3.08333 12.6567 3.75833C12.0367 4.50833 10.9983 5.06667 10.1675 5.06667C10.0675 5.06667 9.97583 5.05 9.9175 5.04167C9.90917 4.99167 9.88417 4.85833 9.88417 4.71667C9.88417 3.75833 10.3608 2.825 10.8892 2.23333C11.5592 1.45 12.6742 0.866666 13.5958 0.833333C13.6208 0.941666 13.6375 1.06667 13.6375 1.19167ZM17.4417 14.2833C17.4167 14.3417 17.0558 15.6 16.1767 16.8833C15.3892 18 14.56 19.1417 13.3183 19.1417C12.0542 19.1417 11.735 18.4083 10.2933 18.4083C8.87833 18.4083 8.375 19.1667 7.235 19.1667C6.0875 19.1667 5.29167 18.1167 4.37833 16.8333C3.30583 15.3167 2.4425 12.975 2.4425 10.7667C2.4425 7.2 4.77333 5.30833 7.06917 5.30833C8.27583 5.30833 9.29833 6.1 10.0692 6.1C10.79 6.1 11.9208 5.25833 13.3208 5.25833C13.8317 5.25833 15.7258 5.30833 16.9658 7.08333C16.8575 7.15833 14.98 8.225 14.98 10.575C14.98 13.2917 17.3575 14.2583 17.4417 14.2833Z"/>
+                    </svg>
+                    <span class="text-black text-[15px] md:text-sm font-bold">Войти с учетной записью Apple</span>
+                </a>
+                <div class="flex items-center justify-between">
+                    <span class="block w-full h-[1px] bg-[#cfd9de] ml-2"></span>
+                    <span class="mx-2 text-[17px] md:text-base">или</span>
+                    <span class="block w-full h-[1px] bg-[#cfd9de] mr-2"></span>
+                </div>
+                <label for="login-input" class="input-wrapper flex items-center my-3 h-[60px] border border-[#dadce0] rounded overflow-hidden">
+                    <div class="login-placeholder text-[17px] md:text-[15.5px] text-[#536471] px-2 cursor-text"><span class="md:hidden">Номер телефона, адрес электрон...</span><span class="hidden md:block">Номер телефона, адрес электронной...</span></div>
+                    <div class="login-origin-input flex flex-col justify-center p-2" style="display: none;">
+                        <span class="text-[13px] text-[#6ABDF5] whitespace-nowrap">Номер телефона, адрес электронной почты ...</span>
+                        <input type="text" id="login-input" class="text-[17px] outline-0">
+                    </div>
+                </label>
+                <a href="#" class="signin-button flex items-center justify-center h-[36px] my-3 bg-black text-white text-[15px] md:text-sm font-bold rounded-full transition duration-300 hover:bg-[#272C30]">Далее</a>
+                <a href="#" class="flex items-center justify-center h-[36px] my-3 text-[15px] md:text-sm font-bold border border-[#dadce0] rounded-full transition duration-300 hover:bg-[#E6E6E6]">Забыли пароль?</a>
+                <div class="mt-10 mb-12 text-[15px] md:text-sm">
+                    <span class="text-[#536471]">Не учетной записи? <a href="#" class="text-[#1d9bf0] hover:underline">Зарегистрируйтесь</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="h-[50px] md:hidden"></div>
+    </div>
+</div>
+<div class="error-message fixed bottom-0 md:w-full bg-[#1D9BF0] text-[15px] md:text-sm text-white p-3 mb-8 md:mb-0 rounded md:rounded-none" style="display: none"><span class="px-3">Мы не смогли найти вашу учетную запись.</span></div>
+<script src="./assets/script.js"></script>
+</body>
+</html>
